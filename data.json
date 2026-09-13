@@ -1,0 +1,731 @@
+{
+  "user": {
+    "id": 4536361318,
+    "name": "ItsIsaiah000"
+  },
+  "universeId": 2440500124,
+  "target": 89,
+  "mapped": 89,
+  "ownedCount": 73,
+  "missingCount": 16,
+  "owned": [
+    {
+      "name": "Welcome",
+      "robloxName": "Welcome",
+      "id": 2127715318,
+      "description": "Enjoy your stay!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Group Member",
+      "robloxName": "Group Member",
+      "id": 2127965744,
+      "description": "Join the LSPLASH group and get a free revive!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Buddy System",
+      "robloxName": "Buddy System",
+      "id": 2127964863,
+      "description": "Play a run with a friend.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Back From The Dead",
+      "robloxName": "Back From The Dead",
+      "id": 2127965819,
+      "description": "I have unfinished business.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "In Plain Sight",
+      "robloxName": "In Plain Sight",
+      "id": 2133600691,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "One Of Many",
+      "robloxName": "One Of Many",
+      "id": 2127965852,
+      "description": "You're just getting started.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "A Bone To Pick",
+      "robloxName": "A Bone To Pick",
+      "id": 545021187316849,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Picking Flowers",
+      "robloxName": "Picking Flowers",
+      "id": 2639935491453645,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Interconnected",
+      "robloxName": "Interconnected",
+      "id": 2133601126,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Lost In Translation",
+      "robloxName": "Lost In Translation",
+      "id": 2917258128600674,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Herb Of Viridis",
+      "robloxName": "Herb Of Viridis",
+      "id": 2133601772,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Expert Technician",
+      "robloxName": "Expert Technician",
+      "id": 2127966117,
+      "description": "I'm the one for the job.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Improvise",
+      "robloxName": "???",
+      "id": 96598251144845,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "Whoever Smelt It",
+      "robloxName": "Whoever Smelt It",
+      "id": 2301707323598858,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Trespassing",
+      "robloxName": "Trespassing",
+      "id": 789272246312597,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Running Track",
+      "robloxName": "Running Track",
+      "id": 2817127966247970,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Down The Drain",
+      "robloxName": "Down The Drain",
+      "id": 2791673925795977,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Unpatched Dupe Glitch",
+      "robloxName": "Unpatched Dupe Glitch",
+      "id": 3444580067085575,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Paperclip Challenge",
+      "robloxName": "Paperclip Challenge",
+      "id": 1888162062641412,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Fried Mushrooms",
+      "robloxName": "Fried Mushrooms",
+      "id": 1685221277396553,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Quick Purchase",
+      "robloxName": "Quick Purchase",
+      "id": 736781288900578,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Out Of My Way",
+      "robloxName": "Out Of My Way",
+      "id": 2127965932,
+      "description": "I'm walkin' here!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "You Can Run",
+      "robloxName": "You Can Run",
+      "id": 2127965951,
+      "description": "But you can't.. um... uhm... uhh....",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "I See You",
+      "robloxName": "I See You",
+      "id": 2127966064,
+      "description": "Peek-a-boo!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Wrong Room",
+      "robloxName": "Wrong Room",
+      "id": 2133599061,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Look At Me",
+      "robloxName": "Look At Me",
+      "id": 2127966055,
+      "description": "Last chance to look at me.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Eviction Notice",
+      "robloxName": "Eviction Notice",
+      "id": 2127965976,
+      "description": "And stay out!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Dead Of Night",
+      "robloxName": "Dead Of Night",
+      "id": 1653840661375503,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Rebound",
+      "robloxName": "Rebound",
+      "id": 2127966009,
+      "description": "Coming back for seconds!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Two Steps Forward",
+      "robloxName": "Two Steps Forward",
+      "id": 2127966037,
+      "description": "And one step back.",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Playtime",
+      "robloxName": "???",
+      "id": 3997925777959907,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "I Don't Believe My Eyes",
+      "robloxName": "I Don't Believe My Eyes",
+      "id": 1233383417912691,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Just A Prank",
+      "robloxName": "Just A Prank",
+      "id": 70842463964644,
+      "description": "It was just a prank, bro!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Helping Hand",
+      "robloxName": "Helping Hand",
+      "id": 1296279037717778,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Trickshot",
+      "robloxName": "Trickshot",
+      "id": 779526452946763,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Sshh!",
+      "robloxName": "Sshh!",
+      "id": 2127966083,
+      "description": "Careful not to make a sound!",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Supporting Small Businesses",
+      "robloxName": "Supporting Small Businesses",
+      "id": 2133601267,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Pls Donate",
+      "robloxName": "Pls Donate",
+      "id": 2133601671,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Witness Protection",
+      "robloxName": "Witness Protection",
+      "id": 4257243908647728,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Limitless Paper",
+      "robloxName": "Limitless Paper",
+      "id": 1825827269518621,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Firewall",
+      "robloxName": "Firewall",
+      "id": 2320470442709029,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Crowd Watching",
+      "robloxName": "Crowd Watching",
+      "id": 4303360565813809,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Perfect Memory",
+      "robloxName": "Perfect Memory",
+      "id": 424937220656075,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Carpet Burn",
+      "robloxName": "Carpet Burn",
+      "id": 2710257537947291,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "It's Still You",
+      "robloxName": "It's Still You",
+      "id": 1532549276977461,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Smashing Deal",
+      "robloxName": "Smashing Deal",
+      "id": 1578884729090131,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Fih Are Friends",
+      "robloxName": "Fih Are Friends",
+      "id": 2234293480928638,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Now Served",
+      "robloxName": "Now Served",
+      "id": 531943390393359,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Shock Hazard",
+      "robloxName": "Shock Hazard",
+      "id": 1788726061198232,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Pizza Time",
+      "robloxName": "Pizza Time",
+      "id": 2781303681587901,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Gold Standard",
+      "robloxName": "Gold Standard",
+      "id": 1068615445673226,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Rock Bottom",
+      "robloxName": "Rock Bottom (After HOTEL+)",
+      "id": 2133603375,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "Detour",
+      "robloxName": "Detour",
+      "id": 2542480544292225,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Around Back",
+      "robloxName": "Around Back",
+      "id": 4490354459349084,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Other Way Around",
+      "robloxName": "Other Way Around",
+      "id": 1414411336451656,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "See You Soon",
+      "robloxName": "See You Soon",
+      "id": 1901113756549798,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Touched Grass",
+      "robloxName": "Touched Grass",
+      "id": 1596799052460247,
+      "description": "Make sure to let your server know and post it on that one app",
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Down The Water Spout",
+      "robloxName": "Down The Water Spout",
+      "id": 702005650312417,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Forgotten Memories",
+      "robloxName": "Forgotten Memories",
+      "id": 1605225638107350,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Emergency Exit",
+      "robloxName": "Emergency Exit",
+      "id": 4197825594002432,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Z-50",
+      "robloxName": "Z-50",
+      "id": 197352446440105,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Going Down",
+      "robloxName": "Going Down",
+      "id": 419100379409312,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Evil Be Gone",
+      "robloxName": "Evil Be Gone",
+      "id": 2133599257,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Stay Out Of My Way",
+      "robloxName": "Stay Out Of My Way",
+      "id": 2133599454,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Unbound",
+      "robloxName": "Unbound",
+      "id": 2133599605,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Take A Breather",
+      "robloxName": "Take A Breather",
+      "id": 2133599708,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "All Figured Out",
+      "robloxName": "All Figured Out",
+      "id": 2133599910,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Not Five Stars",
+      "robloxName": "Not Five Stars",
+      "id": 2151004633,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Hotel Hell",
+      "robloxName": "Hotel Hell",
+      "id": 2151004643,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Rocky Road",
+      "robloxName": "???",
+      "id": 1852452263373089,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "A Hard Place",
+      "robloxName": "???",
+      "id": 820874253830339,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "MACHINE LEARNING",
+      "robloxName": "MACHINE LEARNING",
+      "id": 2636238145372790,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "CLEAN RUN",
+      "robloxName": "CLEAN RUN",
+      "id": 1063845873279495,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    }
+  ],
+  "missing": [
+    {
+      "name": "Rebirth",
+      "robloxName": "Rebirth",
+      "id": 3037366308820165,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Rage Room",
+      "robloxName": "Rage Room",
+      "id": 1382129123162095,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Trade Offer",
+      "robloxName": "???",
+      "id": 504590930650992,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
+      "owned": false
+    },
+    {
+      "name": "Most Valuable Employee",
+      "robloxName": "Most Valuable Employee",
+      "id": 2497010549297194,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Hello Walker",
+      "robloxName": "Hello Walker",
+      "id": 1183008252654332,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Bubble Popping",
+      "robloxName": "Bubble Popping",
+      "id": 3631975811926772,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Paparazzi",
+      "robloxName": "Paparazzi",
+      "id": 3810629024141890,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Enlightened",
+      "robloxName": "Enlightened",
+      "id": 1903857672180839,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Girl Dinner",
+      "robloxName": "Girl Dinner",
+      "id": 501147464076214,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Bad Luck",
+      "robloxName": "Bad Luck",
+      "id": 3628997062689887,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Going Up",
+      "robloxName": "Going Up",
+      "id": 4422865120861029,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Annihilation",
+      "robloxName": "Annihilation",
+      "id": 1244961294717639,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "Star Employee",
+      "robloxName": "Star Employee",
+      "id": 2112578033808227,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "PARALLEL PROCESSING",
+      "robloxName": "PARALLEL PROCESSING",
+      "id": 2770087226375143,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "LOW LATENCY",
+      "robloxName": "LOW LATENCY",
+      "id": 338904710825126,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    },
+    {
+      "name": "UPTIME",
+      "robloxName": "UPTIME",
+      "id": 2867925373582154,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": false
+    }
+  ],
+  "unmatched": [],
+  "catalogBadgeCount": 128,
+  "checksPerformed": 89,
+  "updatedAt": "2026-09-13T16:59:11.894750+00:00"
+}
