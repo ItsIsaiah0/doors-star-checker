@@ -1,0 +1,35 @@
+name: Dump DOORS badge catalog
+
+on:
+  push:
+    paths:
+      - '.github/workflows/dump-catalog.yml'
+  workflow_dispatch:
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dump catalog
+        run: |
+          python - <<'PY'
+          import json, urllib.request, urllib.parse
+          U=2440500124
+          out=[]; cursor=None
+          while True:
+              url=f'https://badges.roblox.com/v1/universes/{U}/badges?limit=100&sortOrder=Asc'
+              if cursor: url += '&cursor='+urllib.parse.quote(cursor,safe='')
+              req=urllib.request.Request(url,headers={'User-Agent':'doors-star-checker/1.2'})
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  j=json.loads(r.read().decode())
+              out += j.get('data',[])
+              cursor=j.get('nextPageCursor')
+              if not cursor: break
+          print('COUNT',len(out))
+          for b in out:
+              print(f"{b.get('id')}\t{b.get('name')}\t{b.get('description')}")
+          PY
