@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Isaiah's DOORS Star Checker</title>
+<style>
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
+}
+body {
+  margin:0; padding:20px; background:#0c0c0e; color:#f5f5f7;
+}
+.wrap { max-width:900px; margin:0 auto; }
+h1 { font-size:28px; margin:0 0 8px; }
+.sub { color:#b6b6be; line-height:1.45; margin-bottom:18px; }
+.card {
+  background:#17171b; border:1px solid #2b2b31; border-radius:16px;
+  padding:16px; margin:12px 0;
+}
+.big { font-size:42px; font-weight:800; letter-spacing:-1px; }
+.status { font-size:15px; color:#c9c9d1; white-space:pre-wrap; }
+button {
+  width:100%; border:0; border-radius:12px; padding:14px 16px;
+  font-size:17px; font-weight:700; background:#f2f2f7; color:#111;
+  margin-top:10px;
+}
+button:disabled { opacity:.55; }
+.row {
+  display:flex; justify-content:space-between; gap:12px;
+  padding:10px 0; border-bottom:1px solid #2b2b31;
+}
+.row:last-child { border-bottom:0; }
+.name { font-weight:650; }
+.date { color:#a6a6af; font-size:13px; text-align:right; }
+.ok { color:#86efac; }
+.miss { color:#fca5a5; }
+.warn { color:#fde68a; }
+small { color:#9a9aa3; }
+details > summary { cursor:pointer; font-weight:700; padding:4px 0; }
+code { word-break:break-all; font-size:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>⭐ DOORS Star Progress</h1>
+  <div class="sub">
+    Roblox user: <b>ItsIsaiah000</b> (4536361318)<br>
+    DOORS universe: <b>2440500124</b><br>
+    Target: <b>89 current progression achievements</b>.
+  </div>
+
+  <div class="card">
+    <div id="score" class="big">— / 89</div>
+    <div id="status" class="status">Ready.</div>
+    <button id="run">Check my DOORS badges</button>
+  </div>
+
+  <div id="problemCard" class="card" style="display:none">
+    <div class="warn"><b>Needs attention</b></div>
+    <div id="problems" class="status"></div>
+  </div>
+
+  <div class="card">
+    <details open>
+      <summary>❌ Missing progression achievements (<span id="missingCount">—</span>)</summary>
+      <div id="missing"></div>
+    </details>
+  </div>
+
+  <div class="card">
+    <details>
+      <summary>✅ Owned progression achievements (<span id="ownedCount">—</span>)</summary>
+      <div id="owned"></div>
+    </details>
+  </div>
+
+  <div class="card">
+    <button id="copy" disabled>Copy summary</button>
+    <div style="margin-top:10px"><small>
+      This page reads only public Roblox badge data. It does not ask for your password, cookie, token, or login.
+      It first loads DOORS' badge list, then checks only the 89 progression badge IDs against your user ID.
+    </small></div>
+  </div>
+</div>
+
+<script>
+const USER_ID = 4536361318;
+const UNIVERSE_ID = 2440500124;
+const progressionNames = ["Welcome", "Group Member", "Buddy System", "Back From The Dead", "In Plain Sight", "One Of Many", "A Bone To Pick", "Picking Flowers", "Rebirth", "Interconnected", "Lost In Translation", "Herb Of Viridis", "Expert Technician", "Improvise", "Whoever Smelt It", "Trespassing", "Running Track", "Down The Drain", "Unpatched Dupe Glitch", "Paperclip Challenge", "Rage Room", "Fried Mushrooms", "Quick Purchase", "Out Of My Way", "You Can Run", "I See You", "Wrong Room", "Look At Me", "Eviction Notice", "Dead Of Night", "Rebound", "Two Steps Forward", "Playtime", "I Don't Believe My Eyes", "Just A Prank", "Helping Hand", "Trickshot", "Trade Offer", "Sshh!", "Supporting Small Businesses", "Pls Donate", "Most Valuable Employee", "Witness Protection", "Limitless Paper", "Hello Walker", "Firewall", "Crowd Watching", "Perfect Memory", "Carpet Burn", "It's Still You", "Smashing Deal", "Fih Are Friends", "Bubble Popping", "Paparazzi", "Now Served", "Shock Hazard", "Enlightened", "Girl Dinner", "Pizza Time", "Gold Standard", "Bad Luck", "Rock Bottom", "Detour", "Around Back", "Other Way Around", "See You Soon", "Touched Grass", "Down The Water Spout", "Forgotten Memories", "Emergency Exit", "Z-50", "Going Down", "Going Up", "Evil Be Gone", "Stay Out Of My Way", "Unbound", "Take A Breather", "All Figured Out", "Annihilation", "Not Five Stars", "Hotel Hell", "Rocky Road", "A Hard Place", "Star Employee", "MACHINE LEARNING", "CLEAN RUN", "PARALLEL PROCESSING", "LOW LATENCY", "UPTIME"];
+let lastSummary = "";
+
+const aliases = new Map([
+  ["clean run", ["clear run"]],
+  ["down the water spout", ["down the water sprout"]],
+]);
+
+function norm(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function fetchJSON(path) {
+  const bases = [
+    "https://badges.roblox.com",
+    "https://badges.roproxy.com"
+  ];
+  let errors = [];
+  for (const base of bases) {
+    try {
+      const r = await fetch(base + path, {cache:"no-store"});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    } catch (e) {
+      errors.push(`${base}: ${e.message}`);
+    }
+  }
+  throw new Error(errors.join("\n"));
+}
+
+async function getUniverseBadges(setStatus) {
+  let out = [];
+  let cursor = null;
+  let page = 0;
+  do {
+    page++;
+    setStatus(`Loading DOORS badge catalog… page ${page}`);
+    let path = `/v1/universes/${UNIVERSE_ID}/badges?limit=100&sortOrder=Asc`;
+    if (cursor) path += `&cursor=${encodeURIComponent(cursor)}`;
+    const j = await fetchJSON(path);
+    out.push(...(j.data || []));
+    cursor = j.nextPageCursor || null;
+  } while (cursor);
+  return out;
+}
+
+function matchProgression(universeBadges) {
+  const byName = new Map();
+  for (const b of universeBadges) {
+    const key = norm(b.name);
+    if (!byName.has(key)) byName.set(key, []);
+    byName.get(key).push(b);
+  }
+  const matched = [];
+  const unmatched = [];
+
+  for (const name of progressionNames) {
+    const keys = [norm(name), ...(aliases.get(norm(name)) || [])];
+    let candidates = [];
+    for (const k of keys) {
+      if (byName.has(k)) candidates.push(...byName.get(k));
+    }
+    candidates.sort((a,b) => Number(Boolean(b.enabled)) - Number(Boolean(a.enabled)));
+    const picked = candidates[0];
+    if (picked) matched.push({targetName:name, ...picked});
+    else unmatched.push(name);
+  }
+  return {matched, unmatched};
+}
+
+async function getAwardedDates(ids, setStatus) {
+  const owned = new Map();
+  const BATCH = 100;
+  for (let i=0; i<ids.length; i+=BATCH) {
+    const batch = ids.slice(i, i+BATCH);
+    setStatus(`Checking your progression badges… ${Math.min(i+BATCH, ids.length)}/${ids.length}`);
+    const path = `/v1/users/${USER_ID}/badges/awarded-dates?badgeIds=${batch.join(",")}`;
+    const j = await fetchJSON(path);
+    for (const row of (j.data || [])) owned.set(String(row.badgeId), row.awardedDate);
+  }
+  return owned;
+}
+
+function renderRows(el, rows, owned) {
+  el.innerHTML = "";
+  if (!rows.length) {
+    el.innerHTML = '<div class="row"><div class="name">None 🎉</div></div>';
+    return;
+  }
+  for (const r of rows) {
+    const div = document.createElement("div");
+    div.className = "row";
+    const d = owned.get(String(r.id));
+    const date = d ? new Date(d).toLocaleDateString() : "";
+    div.innerHTML = `<div class="name">${escapeHTML(r.targetName)}</div>
+      <div class="date">${d ? "Earned " + escapeHTML(date) : "Not owned"}</div>`;
+    el.appendChild(div);
+  }
+}
+
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+async function run() {
+  const btn = document.getElementById("run");
+  const copy = document.getElementById("copy");
+  const score = document.getElementById("score");
+  const status = document.getElementById("status");
+  const pc = document.getElementById("problemCard");
+  const problems = document.getElementById("problems");
+  btn.disabled = true;
+  copy.disabled = true;
+  pc.style.display = "none";
+  score.textContent = "… / 89";
+
+  const setStatus = t => status.textContent = t;
+
+  try {
+    const universeBadges = await getUniverseBadges(setStatus);
+    setStatus(`Loaded ${universeBadges.length} DOORS Roblox badges. Matching the 89 progression achievements…`);
+
+    const {matched, unmatched} = matchProgression(universeBadges);
+    if (unmatched.length) {
+      pc.style.display = "";
+      problems.textContent =
+        `I could only map ${matched.length}/89 progression names to current Roblox badge IDs. ` +
+        `Unmatched: ${unmatched.join(", ")}.\n\n` +
+        `The page will still check everything it mapped, but don't treat the score as final until these are resolved.`;
+    }
+
+    const owned = await getAwardedDates(matched.map(x => x.id), setStatus);
+    const have = matched.filter(x => owned.has(String(x.id)));
+    const missing = matched.filter(x => !owned.has(String(x.id)));
+
+    score.textContent = `${have.length} / 89`;
+    document.getElementById("ownedCount").textContent = have.length;
+    document.getElementById("missingCount").textContent = missing.length + unmatched.length;
+
+    renderRows(document.getElementById("owned"), have, owned);
+    renderRows(document.getElementById("missing"), missing, owned);
+
+    if (unmatched.length) {
+      const m = document.getElementById("missing");
+      for (const name of unmatched) {
+        const div = document.createElement("div");
+        div.className = "row";
+        div.innerHTML = `<div class="name">${escapeHTML(name)}</div><div class="date warn">ID not mapped</div>`;
+        m.appendChild(div);
+      }
+    }
+
+    if (!unmatched.length) {
+      setStatus(
+        have.length === 89
+          ? "You have every current progression badge — you should have the ⭐."
+          : `Done. You're missing ${missing.length} progression badge${missing.length===1?"":"s"}.`
+      );
+    } else {
+      setStatus(`Checked ${matched.length} mapped progression badges; ${unmatched.length} name(s) need mapping.`);
+    }
+
+    lastSummary =
+      `ItsIsaiah000 DOORS star progress: ${have.length}/89\n` +
+      `Missing (${missing.length + unmatched.length}):\n` +
+      [...missing.map(x => x.targetName), ...unmatched.map(x => x + " [unmapped]")].join("\n");
+    copy.disabled = false;
+  } catch (e) {
+    score.textContent = "Error";
+    setStatus("Could not reach the Roblox badge API from this browser.\n\n" + e.message);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+document.getElementById("run").addEventListener("click", run);
+document.getElementById("copy").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(lastSummary);
+    document.getElementById("copy").textContent = "Copied ✓";
+    setTimeout(()=>document.getElementById("copy").textContent="Copy summary", 1400);
+  } catch {
+    alert(lastSummary);
+  }
+});
+
+setTimeout(run, 250);
+</script>
+</body>
+</html>
