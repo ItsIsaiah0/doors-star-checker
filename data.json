@@ -6,8 +6,8 @@
   "universeId": 2440500124,
   "target": 89,
   "mapped": 89,
-  "ownedCount": 73,
-  "missingCount": 16,
+  "ownedCount": 76,
+  "missingCount": 13,
   "owned": [
     {
       "name": "Welcome",
@@ -314,6 +314,14 @@
       "owned": true
     },
     {
+      "name": "Most Valuable Employee",
+      "robloxName": "Most Valuable Employee",
+      "id": 2497010549297194,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
       "name": "Witness Protection",
       "robloxName": "Witness Protection",
       "id": 4257243908647728,
@@ -546,6 +554,14 @@
       "owned": true
     },
     {
+      "name": "Annihilation",
+      "robloxName": "Annihilation",
+      "id": 1244961294717639,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
       "name": "Not Five Stars",
       "robloxName": "Not Five Stars",
       "id": 2151004633,
@@ -575,6 +591,14 @@
       "id": 820874253830339,
       "description": null,
       "idSource": "official DOORS Wiki Roblox link",
+      "owned": true
+    },
+    {
+      "name": "Star Employee",
+      "robloxName": "Star Employee",
+      "id": 2112578033808227,
+      "description": null,
+      "idSource": "Roblox DOORS universe catalog exact-name match",
       "owned": true
     },
     {
@@ -617,14 +641,6 @@
       "id": 504590930650992,
       "description": null,
       "idSource": "official DOORS Wiki Roblox link",
-      "owned": false
-    },
-    {
-      "name": "Most Valuable Employee",
-      "robloxName": "Most Valuable Employee",
-      "id": 2497010549297194,
-      "description": null,
-      "idSource": "Roblox DOORS universe catalog exact-name match",
       "owned": false
     },
     {
@@ -684,22 +700,6 @@
       "owned": false
     },
     {
-      "name": "Annihilation",
-      "robloxName": "Annihilation",
-      "id": 1244961294717639,
-      "description": null,
-      "idSource": "Roblox DOORS universe catalog exact-name match",
-      "owned": false
-    },
-    {
-      "name": "Star Employee",
-      "robloxName": "Star Employee",
-      "id": 2112578033808227,
-      "description": null,
-      "idSource": "Roblox DOORS universe catalog exact-name match",
-      "owned": false
-    },
-    {
       "name": "PARALLEL PROCESSING",
       "robloxName": "PARALLEL PROCESSING",
       "id": 2770087226375143,
@@ -727,5 +727,5 @@
   "unmatched": [],
   "catalogBadgeCount": 128,
   "checksPerformed": 89,
-  "updatedAt": "2026-09-13T20:51:10.801292+00:00"
+  "updatedAt": "2026-09-14T04:58:07.642066+00:00"
 }
