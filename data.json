@@ -6,8 +6,8 @@
   "universeId": 2440500124,
   "target": 89,
   "mapped": 89,
-  "ownedCount": 76,
-  "missingCount": 13,
+  "ownedCount": 77,
+  "missingCount": 12,
   "owned": [
     {
       "name": "Welcome",
@@ -287,6 +287,14 @@
       "id": 779526452946763,
       "description": null,
       "idSource": "Roblox DOORS universe catalog exact-name match",
+      "owned": true
+    },
+    {
+      "name": "Trade Offer",
+      "robloxName": "???",
+      "id": 504590930650992,
+      "description": null,
+      "idSource": "official DOORS Wiki Roblox link",
       "owned": true
     },
     {
@@ -636,14 +644,6 @@
       "owned": false
     },
     {
-      "name": "Trade Offer",
-      "robloxName": "???",
-      "id": 504590930650992,
-      "description": null,
-      "idSource": "official DOORS Wiki Roblox link",
-      "owned": false
-    },
-    {
       "name": "Hello Walker",
       "robloxName": "Hello Walker",
       "id": 1183008252654332,
@@ -727,5 +727,5 @@
   "unmatched": [],
   "catalogBadgeCount": 128,
   "checksPerformed": 89,
-  "updatedAt": "2026-09-18T20:55:10.111939+00:00"
+  "updatedAt": "2026-09-19T04:39:11.093083+00:00"
 }
